@@ -26,7 +26,7 @@ const Footer = () => {
         </View>
 
         <View style={styles.navColumn}>
-          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+          <TouchableOpacity onPress={() => navigation.navigate('MainTabs')}>
             <Text style={styles.link}>Home</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('Leaderboard')}>

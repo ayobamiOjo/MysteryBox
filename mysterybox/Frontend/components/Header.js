@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet,TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const Header = () => {
+   const navigation = useNavigation();
   return (
     <View style={styles.header}>
       <Image
@@ -9,7 +11,7 @@ const Header = () => {
         style={styles.logo}
       />
      <View style={styles.navContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity onPress={() => navigation.navigate('MainTabs')}>
           <Text style={styles.link}>Home</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Leaderboard')}>
@@ -49,7 +51,7 @@ const styles = StyleSheet.create({
       navContainer: {
         flexDirection: 'row',
         justifyContent: 'flex-end',
-        flex: 1,
+        flexGrow: 1,
       },
       link: {
         color: 'white',
