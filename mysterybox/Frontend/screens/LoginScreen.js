@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { useAuth } from '../context/AuthContext';
 import { useNavigation } from '@react-navigation/native';
+import GradientBackground from '../components/GradientBackground';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function LoginScreen() {
   const navigation = useNavigation();
@@ -19,33 +22,47 @@ export default function LoginScreen() {
   };
 
   return (
-    <View style={{ flex: 1, padding: 20 }}>
+    <View style={{ flex: 1,}}>
+       <GradientBackground>
+       <Header />
+       <View
+       style={{ flex: 1,margin: 20,
+        padding: 20,
+        // If you want a semi-transparent background box:
+        // backgroundColor: 'rgba(255,255,255,0.9)',
+        borderRadius: 10}}
+       >
       <Text style={{ fontSize: 24, marginBottom: 20 }}>LOGIN</Text>
 
-      <Text>Your Email</Text>
+      <Text  
+      >Your Email</Text>
       <TextInput
         value={email}
         onChangeText={setEmail}
         placeholder="Enter your email"
         style={{
-          borderWidth: 1,
-          borderColor: '#ccc',
-          marginBottom: 10,
-          padding: 8,
+          backgroundColor: '#fff',
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 5,
+    borderWidth: 1,
+    borderColor: '#ccc',
         }}
       />
 
-      <Text>Your Password</Text>
+      <Text  >Your Password</Text>
       <TextInput
         value={password}
         onChangeText={setPassword}
         placeholder="Enter your password"
         secureTextEntry
         style={{
-          borderWidth: 1,
-          borderColor: '#ccc',
-          marginBottom: 5,
-          padding: 8,
+          backgroundColor: '#fff',
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 5,
+    borderWidth: 1,
+    borderColor: '#ccc',
         }}
       />
 
@@ -76,6 +93,9 @@ export default function LoginScreen() {
           Don't have an account? Sign up
         </Text>
       </TouchableOpacity>
+      </View>
+      <Footer/>
+      </GradientBackground>
     </View>
   );
 }
