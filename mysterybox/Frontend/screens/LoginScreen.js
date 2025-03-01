@@ -14,7 +14,7 @@ export default function LoginScreen() {
 
   const handleLogin = () => {
     login(email, password);
-    // If you want to navigate away on success, you can do so
+    // Navigate to MainTabs or wherever you want after successful login
     navigation.navigate('MainTabs');
   };
 
@@ -44,11 +44,20 @@ export default function LoginScreen() {
         style={{
           borderWidth: 1,
           borderColor: '#ccc',
-          marginBottom: 20,
+          marginBottom: 5,
           padding: 8,
         }}
       />
 
+      {/* Forgot Password Link */}
+      <TouchableOpacity
+        onPress={() => navigation.navigate('ForgetPassword')}
+        style={{ marginBottom: 20 }}
+      >
+        <Text style={{ color: 'blue' }}>Forgot Password?</Text>
+      </TouchableOpacity>
+
+      {/* Login Button */}
       <TouchableOpacity
         onPress={handleLogin}
         style={{
@@ -61,6 +70,7 @@ export default function LoginScreen() {
         <Text style={{ color: '#fff', fontWeight: 'bold' }}>Login</Text>
       </TouchableOpacity>
 
+      {/* Sign Up Link */}
       <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
         <Text style={{ marginTop: 20, color: 'blue' }}>
           Don't have an account? Sign up

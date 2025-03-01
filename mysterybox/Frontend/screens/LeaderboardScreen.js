@@ -88,8 +88,9 @@ export default function LeaderboardScreen() {
           ))}
 
           {/* Footer or additional spacing */}
-          <Footer />
+         
         </ScrollView>
+        <Footer />
       </GradientBackground>
     </SafeAreaView>
   );

@@ -32,7 +32,7 @@ const Footer = () => {
           <TouchableOpacity onPress={() => navigation.navigate('Leaderboard')}>
             <Text style={styles.link}>Leaderboard</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('PostMystery')}>
+          <TouchableOpacity onPress={() => navigation.navigate('CreateMystery')}>
             <Text style={styles.link}>Post Mystery</Text>
           </TouchableOpacity>
         </View>

@@ -171,8 +171,9 @@ export default function ProfileScreen() {
             contentContainerStyle={{ paddingBottom: 40 }}
           />
 
-          <Footer />
+          
         </ScrollView>
+        <Footer />
       </GradientBackground>
     </SafeAreaView>
   );
